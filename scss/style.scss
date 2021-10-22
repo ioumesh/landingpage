@@ -133,38 +133,80 @@ header {
         /* Add styles to the form container */
         .container {
           position: absolute;
-          left: 20px;
+          left: 0px;
           top: 20px;
           margin: 20px;
-          max-width: 300px;
+          max-width: 384px;
+          max-height: 444px;
           padding: 16px;
           background: #ffffff 0% 0% no-repeat padding-box;
           box-shadow: 0px 4px 6px #00000029;
           border: 1px solid #d8deea;
+          border-radius: 5px;
           opacity: 1;
-          #inputimg {
-            background: transparent url("/images/Question.svg") 0% 0% no-repeat
-              padding-box;
+
+          .areatext{
+            width:330px;
+            height:128px;
+            background: #fff;
+            border: 1px solid #d8deea;
+            text-align: left;
+            letter-spacing: 0.03px;
+            color: #b1bdd6;
             opacity: 1;
+            border-radius: 5px;
+            padding: 12px 20px;
+            margin: 8px 0;
+            font-size: 14px;
+          }
+          .inputgroup {
+            display: flex;
+            width: 330px;
+            position: relative;
+            .input3 {
+              width: 30%;
+              margin-right: 5px;
+            }
+            .input4 {
+              width: 70%;
+              position: relative;
+            }
+            .input4:focus::placeholder {
+              position: absolute;
+              top: 0;
+              transition: all 2s ease;
+            }
+            .minus,.plus {
+              display: flex;
+              color: #e48b35;
+              font-size: 50px;
+              // position: absolute;
+              // top: 0;
+              // right:0;
+              // bottom:0;
+            }
           }
           /* Full-width input fields */
-          input[type="text"],
-          input[type="password"] {
-            width: 100%;
-            padding: 15px;
-            margin: 5px 0 22px 0;
-            border: none;
-            background: #f1f1f1;
-            text-align: center;
-            font: normal normal bold 18px/27px Hind;
-            letter-spacing: 0.04px;
-            color: #2c2c2c;
+          input[type="text"] {
+            width: 330px;
+            height: 34px;
+            background: #fff;
+            border: 1px solid #d8deea;
+            text-align: left;
+            letter-spacing: 0.03px;
+            color: #b1bdd6;
             opacity: 1;
+            border-radius: 5px;
+            padding: 12px 20px;
+            margin: 8px 0;
+            font-size: 14px;
+          }
+          ::placeholder {
+            /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: #b1bdd6;
           }
 
-          input[type="text"]:focus,
-          input[type="password"]:focus {
-            background-color: #ddd;
+          input[type="text"]:focus {
             outline: none;
           }
 
@@ -172,11 +214,13 @@ header {
           .btn {
             background-color: #e48b35;
             color: white;
-            padding: 16px 20px;
+            padding: 10px 20px;
             border: none;
             cursor: pointer;
-            width: 100%;
+            width: 330px;
+            border-radius: 5px;
             opacity: 0.9;
+            font-size: 12px;
           }
 
           .btn:hover {
