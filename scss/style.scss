@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+// #E48B35
+header {
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  .logoContainer {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 150px;
+    height: 50px;
+    .icons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .icons > img,
+    button {
+      margin-left: 35px;
+    }
+    .icons .btn {
+      background-color: #51893f;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+  }
+  .logoContainer > img {
+    justify-content: flex-start;
+  }
+  // navbar css styles
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: 50px;
+    background-color: #f6f6fa;
+
+    .menu a {
+      text-decoration: none;
+      color: #2c2c2c;
+      font-size: 13px;
+      margin-left: 30px;
+      font-weight: 500;
+
+      span {
+        background: rgba(
+          76,
+          175,
+          80,
+          0.3
+        ); /* Green background with 30% opacity */
+        color: #51893e;
+        font-weight: bold;
+        margin-left: 2px;
+        font-size: 11px;
+        border-radius: 5px;
+        padding: 2px;
+      }
+    }
+  }
+  // clippath styles
+  .bannerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px 150px;
+    position: relative;
+    .left {
+      flex: 3;
+      margin-top: 20px;
+      background-image: url("/images/bgoverlay.svg");
+      background-repeat: no-repeat;
+      background-position: right;
+      background-size: contain;
+      .heading {
+        width: 100%;
+        font-size: 56px;
+        text-align: left;
+        color: #2c2c2c;
+        span {
+          color: #e48b35;
+        }
+      }
+      .textPara {
+        width: 80%;
+        font-size: 16px;
+        margin-top: 20px;
+        text-align: left;
+        color: #2c2c2c;
+      }
+      .optionContainer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 28px;
+        .option h2 {
+          color: #3b5999;
+          font-size: 24px;
+        }
+        .option p {
+          color: #2c2c2c;
+          text-transform: uppercase;
+          font-size: 12px;
+        }
+      }
+    }
+    .right {
+      flex: 1;
+      .circle {
+        width: 500px;
+        height: 500px;
+        background-image: url(/images/clippath.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        float: right;
+        /* Add styles to the form container */
+        .container {
+          position: absolute;
+          left: 20px;
+          top: 20px;
+          margin: 20px;
+          max-width: 300px;
+          padding: 16px;
+          background: #ffffff 0% 0% no-repeat padding-box;
+          box-shadow: 0px 4px 6px #00000029;
+          border: 1px solid #d8deea;
+          opacity: 1;
+          #inputimg {
+            background: transparent url("/images/Question.svg") 0% 0% no-repeat
+              padding-box;
+            opacity: 1;
+          }
+          /* Full-width input fields */
+          input[type="text"],
+          input[type="password"] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background: #f1f1f1;
+            text-align: center;
+            font: normal normal bold 18px/27px Hind;
+            letter-spacing: 0.04px;
+            color: #2c2c2c;
+            opacity: 1;
+          }
+
+          input[type="text"]:focus,
+          input[type="password"]:focus {
+            background-color: #ddd;
+            outline: none;
+          }
+
+          /* Set a style for the submit button */
+          .btn {
+            background-color: #e48b35;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+          }
+
+          .btn:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
