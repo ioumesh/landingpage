@@ -14,7 +14,7 @@ header {
     @include mobile {
       display: flex;
       align-items: center;
-      justify-content:space-evenly;
+      justify-content: space-evenly;
     }
     .icons {
       display: flex;
@@ -25,7 +25,7 @@ header {
     button {
       margin-left: 35px;
       @include mobile {
-        margin-left:20px;
+        margin-left: 20px;
       }
     }
     .icons .btn {
@@ -53,8 +53,12 @@ header {
     flex-wrap: wrap;
     height: 50px;
     background-color: #f6f6fa;
+   
     .menu {
       margin-right: 25px;
+      @include mobile {
+        justify-content: center;
+      }
     }
     .menu a {
       text-decoration: none;
@@ -86,13 +90,6 @@ header {
     justify-content: center;
     flex-wrap: wrap;
     padding: 10px 120px;
-    position: relative;
-    @include mobile {
-      display: flex;
-      align-items: center;
-      justify-content:space-evenly;
-     
-    }
     .left {
       flex: 3;
       margin-top: 20px;
@@ -105,6 +102,11 @@ header {
         font-size: 56px;
         text-align: left;
         color: #2c2c2c;
+        @include mobile {
+          margin-top: 30px;
+          font-size: 35px;
+          text-align: center;
+        }
         span {
           color: #e48b35;
         }
@@ -115,6 +117,12 @@ header {
         margin-top: 20px;
         text-align: left;
         color: #2c2c2c;
+        @include mobile {
+          text-align: center;
+          margin: auto;
+          margin-top: 20px;
+          font-size: 15px;
+        }
       }
       .optionContainer {
         display: flex;
@@ -124,16 +132,26 @@ header {
         .option h2 {
           color: #3b5999;
           font-size: 24px;
+          @include mobile {
+            font-size: 12px;
+          }
         }
-        .option p {
+        > p {
           color: #2c2c2c;
           text-transform: uppercase;
           font-size: 12px;
+          @include mobile {
+            font-size: 8px;
+          }
         }
       }
     }
     .right {
       flex: 1;
+      @include mobile {
+        display: none;
+      }
+      background-color: green;
       .circle {
         width: 500px;
         height: 500px;
@@ -142,6 +160,7 @@ header {
         background-size: cover;
         position: absolute;
         top: 0;
+        margin-left: 40px;
         float: right;
         /* Add styles to the form container */
         .container {
@@ -300,11 +319,5 @@ header {
         transform: rotate(30deg);
       }
     }
-  }
-}
-
-@media (max-width: 770px) {
-  .menu {
-    display: none;
   }
 }
