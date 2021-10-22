@@ -1,11 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import "../global.scss";
 // #E48B35
 header {
   width: 100%;
@@ -18,6 +11,11 @@ header {
     justify-content: space-between;
     padding: 10px 120px;
     height: 50px;
+    @include mobile {
+      display: flex;
+      align-items: center;
+      justify-content:space-evenly;
+    }
     .icons {
       display: flex;
       align-items: center;
@@ -26,6 +24,9 @@ header {
     .icons > img,
     button {
       margin-left: 35px;
+      @include mobile {
+        margin-left:20px;
+      }
     }
     .icons .btn {
       background-color: #51893f;
@@ -35,6 +36,10 @@ header {
       cursor: pointer;
       border-radius: 5px;
       font-size: 14px;
+      @include mobile {
+        font-size: 10px;
+        padding: 2px 25px;
+      }
     }
   }
   .logoContainer > img {
@@ -82,6 +87,12 @@ header {
     flex-wrap: wrap;
     padding: 10px 120px;
     position: relative;
+    @include mobile {
+      display: flex;
+      align-items: center;
+      justify-content:space-evenly;
+     
+    }
     .left {
       flex: 3;
       margin-top: 20px;
@@ -239,56 +250,61 @@ header {
   display: flex;
   align-items: center;
   justify-content: end;
-  
+
   .chatbox {
     width: 250px;
     height: 300px;
     background-color: #fff;
     overflow: hidden;
-    border:1px solid rgb(99, 98, 98);
-    border-radius:5px;
+    border: 1px solid rgb(99, 98, 98);
+    border-radius: 5px;
     position: relative;
     position: fixed;
-    bottom:30px;
-    .livechat{
-      background-color:#F8E2CB;
+    bottom: 30px;
+    display: none;
+    .livechat {
+      background-color: #f8e2cb;
       padding: 10px;
     }
-    .saleschat{
+    .saleschat {
       padding: 10px;
     }
-    .supportchat{
-      background-color:#F8E2CB;
+    .supportchat {
+      background-color: #f8e2cb;
       padding: 10px;
     }
-    .getcall{
-      background-color:#F8E2CB;
+    .getcall {
+      background-color: #f8e2cb;
       padding: 10px;
     }
   }
-  .chatbtn{
+  .chatbtn {
     width: 70px;
     height: 70px;
     cursor: pointer;
-    overflow:hidden;
+    overflow: hidden;
     position: fixed;
-    bottom:0px;
-    
-    >img{
-        width:100%;
-        height:100%;
-        border-radius:50%;
-        position: absolute;
-        top:0;
-        left:0;
-        padding:2px;
-        cursor: pointer;
-        transition: 0.4s ease-in-out;
-        &:hover{
-          transform:rotate(30deg);
-        }
+    bottom: 0px;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 2px;
+      cursor: pointer;
+      transition: 0.4s ease-in-out;
+      &:hover {
+        transform: rotate(30deg);
       }
     }
   }
-  
+}
 
+@media (max-width: 770px) {
+  .menu {
+    display: none;
+  }
+}
